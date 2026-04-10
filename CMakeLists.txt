@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(BibleApp)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_subdirectory(deps/wxWidgets)
+add_executable(BibleApp src/main.cpp src/BibleFrame.cpp)
+target_link_libraries(BibleApp ${wxWidgets_LIBRARIES})
+target_include_directories(BibleApp PRIVATE include)
